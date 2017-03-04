@@ -1,15 +1,13 @@
 package by.achramionok.model;
 
-import javax.persistence.Basic;
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Id;
+import javax.persistence.*;
 import java.util.Date;
 
 /**
  * Created by Kirill on 01.03.2017.
  */
 @Entity
+@Table(name = "USER",schema = "d6nc4cdvp2slen.public")
 public class User {
     private int id;
     private String name;

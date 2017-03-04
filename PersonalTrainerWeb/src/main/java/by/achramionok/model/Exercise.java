@@ -5,11 +5,13 @@ package by.achramionok.model;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
+import javax.persistence.Table;
 
 /**
  * Created by Kirill on 04.03.2017.
  */
 @Entity
+@Table(name = "EXERCISE", schema = "d6nc4cdvp2slen.public")
 public class Exercise {
     private int id;
     private String name;

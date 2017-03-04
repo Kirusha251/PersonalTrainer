@@ -4,15 +4,18 @@ import by.achramionok.model.Training;
 import by.achramionok.repository.TrainingRepository;
 import by.achramionok.service.TrainingService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import java.util.Collection;
 
 /**
  * Created by Kirill on 04.03.2017.
  */
+@Service
 public class TrainingServiceImpl implements TrainingService {
+
     @Autowired
-    TrainingRepository trainingRepository;
+    private TrainingRepository trainingRepository;
 
     @Override
     public Training findByIdTraining(Integer id) {

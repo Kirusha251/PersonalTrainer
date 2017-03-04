@@ -13,8 +13,9 @@ import java.util.Collection;
  */
 @Service
 public class ExerciseServiceImpl implements ExerciseService {
+
     @Autowired
-    ExerciseRepository exerciseRepository;
+    private ExerciseRepository exerciseRepository;
 
     @Override
     public Exercise findByIdExercise(Integer id) {

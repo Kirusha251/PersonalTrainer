@@ -3,11 +3,13 @@ package by.achramionok.model;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
+import javax.persistence.Table;
 
 /**
  * Created by Kirill on 04.03.2017.
  */
 @Entity
+@Table(name = "TRAINING",schema = "d6nc4cdvp2slen.public")
 public class Training {
     private int id;
     private int userId;
