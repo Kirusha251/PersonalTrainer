@@ -7,7 +7,7 @@ import java.util.Date;
  * Created by Kirill on 01.03.2017.
  */
 @Entity
-@Table(name = "USER",schema = "d6nc4cdvp2slen.public")
+@Table(name = " \"USER\"")
 public class User {
     private int id;
     private String name;
@@ -19,7 +19,12 @@ public class User {
     private Date birthday;
     private Date registeredAt;
 
+    public User() {
+
+    }
+
     @Id
+    @GeneratedValue
     @Column(name = "ID",nullable = false)
     public int getId() {
         return id;

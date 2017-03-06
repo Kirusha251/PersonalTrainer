@@ -10,9 +10,9 @@ import java.util.Collection;
  */
 
 public interface ExerciseService {
-    Exercise findByIdExercise(Integer id);
-    Exercise findByNameExercise(String name);
+    Exercise findById(Integer id);
+    Exercise findByName(String name);
     void save(Exercise exercise);
-    void deleteByIdExercise(Integer id);
+    void deleteById(Integer id);
     Collection<Exercise> findAll();
 }

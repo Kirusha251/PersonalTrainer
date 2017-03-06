@@ -18,13 +18,13 @@ public class ExerciseServiceImpl implements ExerciseService {
     private ExerciseRepository exerciseRepository;
 
     @Override
-    public Exercise findByIdExercise(Integer id) {
-        return exerciseRepository.findByIdExercise(id);
+    public Exercise findById(Integer id) {
+        return exerciseRepository.findById(id);
     }
 
     @Override
-    public Exercise findByNameExercise(String name) {
-        return exerciseRepository.findByNameExercise(name);
+    public Exercise findByName(String name) {
+        return exerciseRepository.findByName(name);
     }
 
     @Override
@@ -33,8 +33,8 @@ public class ExerciseServiceImpl implements ExerciseService {
     }
 
     @Override
-    public void deleteByIdExercise(Integer id) {
-        exerciseRepository.deleteByIdExercise(id);
+    public void deleteById(Integer id) {
+        exerciseRepository.deleteById(id);
     }
 
     @Override

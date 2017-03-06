@@ -10,10 +10,10 @@ import java.util.Collection;
  */
 
 public interface UserService {
-    User findByIdUser(Integer idUser);
-    User findByEmailUser(String email);
-    User findByNameUser(String name);
+    User findById(Integer idUser);
+    User findByEmail(String email);
+    User findByName(String name);
     void save(User user);
-    void deleteByIdUser(Integer idUser);
+    void deleteById(Integer idUser);
     Collection<User> findAll();
 }

@@ -1,20 +1,21 @@
 package by.achramionok.model;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import javax.persistence.*;
 
 /**
  * Created by Kirill on 04.03.2017.
  */
 @Entity
-@Table(name = "TRAINING",schema = "d6nc4cdvp2slen.public")
+@Table(name = "TRAINING")
 public class Training {
     private int id;
     private int userId;
 
+    public Training() {
+    }
+
     @Id
+    @GeneratedValue
     @Column(name = "ID", nullable = false)
     public int getId(){
         return id;

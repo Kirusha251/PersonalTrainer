@@ -18,13 +18,13 @@ public class TrainingServiceImpl implements TrainingService {
     private TrainingRepository trainingRepository;
 
     @Override
-    public Training findByIdTraining(Integer id) {
-        return trainingRepository.findByIdTraining(id);
+    public Training findById(Integer id) {
+        return trainingRepository.findById(id);
     }
 
     @Override
-    public Collection<Training> findAllByIdUser(Integer idUser) {
-        return findAllByIdUser(idUser);
+    public Collection<Training> findAllByUserId(Integer idUser) {
+        return findAllByUserId(idUser);
     }
 
     @Override
@@ -33,8 +33,8 @@ public class TrainingServiceImpl implements TrainingService {
     }
 
     @Override
-    public void deleteByIdTraining(Integer id) {
-        trainingRepository.deleteByIdTraining(id);
+    public void deleteById(Integer id) {
+        trainingRepository.deleteById(id);
     }
 
     @Override

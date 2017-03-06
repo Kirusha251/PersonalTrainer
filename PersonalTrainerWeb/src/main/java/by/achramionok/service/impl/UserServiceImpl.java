@@ -18,18 +18,18 @@ public class UserServiceImpl implements UserService {
     private UserRepository userRepository;
 
     @Override
-    public User findByIdUser(Integer idUser) {
-        return userRepository.findByIdUser(idUser);
+    public User findById(Integer idUser) {
+        return userRepository.findById(idUser);
     }
 
     @Override
-    public User findByEmailUser(String email) {
-        return userRepository.findByEmailUser(email);
+    public User findByEmail(String email) {
+        return userRepository.findByEmail(email);
     }
 
     @Override
-    public User findByNameUser(String name) {
-        return userRepository.findByNameUser(name);
+    public User findByName(String name) {
+        return userRepository.findByName(name);
     }
 
     @Override
@@ -38,8 +38,8 @@ public class UserServiceImpl implements UserService {
     }
 
     @Override
-    public void deleteByIdUser(Integer idUser) {
-        userRepository.deleteByIdUser(idUser);
+    public void deleteById(Integer idUser) {
+        userRepository.deleteById(idUser);
     }
 
     @Override

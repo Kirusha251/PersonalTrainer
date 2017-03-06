@@ -9,9 +9,9 @@ import java.util.Collection;
  */
 
 public interface TrainingService {
-    Training findByIdTraining(Integer id);
-    Collection<Training> findAllByIdUser(Integer idUser);
+    Training findById(Integer id);
+    Collection<Training> findAllByUserId(Integer idUser);
     void save(Training training);
-    void deleteByIdTraining(Integer id);
+    void deleteById(Integer id);
     Collection<Training> findAll();
 }

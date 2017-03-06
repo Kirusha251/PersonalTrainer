@@ -11,8 +11,8 @@ import java.util.Collection;
  */
 
 public interface TrainingRepository extends JpaRepository <Training, Integer> {
-    Training findByIdTraining(Integer id);
-    Collection<Training> findAllByIdUser(Integer idUser);
+    Training findById(Integer id);
+    Collection<Training> findAllByUserId(Integer idUser);
 
-    void deleteByIdTraining(Integer id);
+    void deleteById(Integer id);
 }
