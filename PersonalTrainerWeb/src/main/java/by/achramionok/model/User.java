@@ -7,7 +7,7 @@ import java.util.Date;
  * Created by Kirill on 01.03.2017.
  */
 @Entity
-@Table(name = " \"USER\"")
+@Table(name = "user",catalog = "d6nc4cdvp2slen", schema = "public")
 public class User {
     private int id;
     private String name;
@@ -25,7 +25,7 @@ public class User {
 
     @Id
     @GeneratedValue
-    @Column(name = "ID",nullable = false)
+    @Column(name = "id",nullable = false)
     public int getId() {
         return id;
     }
@@ -35,7 +35,7 @@ public class User {
     }
 
     @Basic
-    @Column(name = "NAME", length = 50)
+    @Column(name = "name", length = 50)
     public String getName(){
         return name;
     }
@@ -45,7 +45,7 @@ public class User {
     }
 
     @Basic
-    @Column(name = "ROLE")
+    @Column(name = "role")
     public int getRole(){
         return role;
     }
@@ -55,7 +55,7 @@ public class User {
     }
 
     @Basic
-    @Column(name = "AGE")
+    @Column(name = "age")
     public int getAge(){
         return age;
     }
@@ -65,7 +65,7 @@ public class User {
     }
 
     @Basic
-    @Column(name = "EMAIL", length = 50)
+    @Column(name = "email", length = 50)
     public String getEmail(){
         return email;
     }
@@ -75,7 +75,7 @@ public class User {
     }
 
     @Basic
-    @Column(name = "PASSWORD", length = 50)
+    @Column(name = "password", length = 50)
     public String getPassword(){
         return password;
     }
@@ -85,7 +85,7 @@ public class User {
     }
 
     @Basic
-    @Column(name = "SEX", length = 20)
+    @Column(name = "sex", length = 20)
     public String getSex(){
         return sex;
     }
@@ -95,7 +95,7 @@ public class User {
     }
 
     @Basic
-    @Column(name = "BIRTHDAY")
+    @Column(name = "birthday")
     public Date getBirthday(){
         return birthday;
     }
@@ -105,7 +105,7 @@ public class User {
     }
 
     @Basic
-    @Column(name = "REGISTERED_AT")
+    @Column(name = "registered_at")
     public Date getRegisteredAt(){
         return registeredAt;
     }

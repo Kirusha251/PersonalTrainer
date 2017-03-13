@@ -6,7 +6,7 @@ import javax.persistence.*;
  * Created by Kirill on 04.03.2017.
  */
 @Entity
-@Table(name = "TRAINING")
+@Table(name = "training", catalog = "d6nc4cdvp2slen", schema = "public")
 public class Training {
     private int id;
     private int userId;
@@ -16,7 +16,7 @@ public class Training {
 
     @Id
     @GeneratedValue
-    @Column(name = "ID", nullable = false)
+    @Column(name = "id", nullable = false)
     public int getId(){
         return id;
     }
@@ -25,7 +25,7 @@ public class Training {
         this.id = id;
     }
 
-    @Column(name = "USER_ID")
+    @Column(name = "user_id")
     public int getUserId(){
         return userId;
     }
