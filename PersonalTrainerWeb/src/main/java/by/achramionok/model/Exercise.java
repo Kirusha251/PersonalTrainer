@@ -2,24 +2,46 @@ package by.achramionok.model;
 
 
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 import javax.persistence.*;
+import java.util.Set;
 
 /**
  * Created by Kirill on 04.03.2017.
  */
 @Entity
-@Table(name = "exercise", catalog = "d6nc4cdvp2slen", schema = "public")
+@Table(name = "exercise")//, catalog = "d6nc4cdvp2slen", schema = "public")
 public class Exercise {
+    @Id
+    @GeneratedValue
+    @Column(name = "id",nullable = false)
     private int id;
+
+    @Column(name = "name",length = 50)
     private String name;
+
+    @Column(name = "description",length = 300)
     private String description;
+
+    @OneToMany(mappedBy = "exercise")
+    private Set<TrainingSet> exercises;
+
+    @ManyToOne
+    @JoinTable(
+            name="trainingSet",
+            joinColumns=
+            @JoinColumn(name="exercise_id", referencedColumnName="id"),
+            inverseJoinColumns=
+            @JoinColumn(name="training_id", referencedColumnName="id")
+    )
+    @JsonIgnore
+    private Training training;
 
     public Exercise() {
     }
 
-    @Id
-    @GeneratedValue
-    @Column(name = "id",nullable = false)
+
     public int getId(){
         return id;
     }
@@ -28,7 +50,7 @@ public class Exercise {
         this.id = id;
     }
 
-    @Column(name = "name",length = 50)
+
     public String getName(){
         return name;
     }
@@ -37,7 +59,7 @@ public class Exercise {
         this.name = name;
     }
 
-    @Column(name = "description",length = 300)
+
     public String getDescription(){
         return description;
     }
@@ -45,4 +67,21 @@ public class Exercise {
     public void setDescription(String description){
         this.description = description;
     }
+
+    public Set<TrainingSet> getExercises() {
+        return exercises;
+    }
+
+    public void setExercises(Set<TrainingSet> exercises) {
+        this.exercises = exercises;
+    }
+
+    public Training getTraining() {
+        return training;
+    }
+
+    public void setTraining(Training training) {
+        this.training = training;
+    }
+
 }

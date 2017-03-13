@@ -13,23 +13,22 @@ import java.util.Collection;
  */
 @Service
 public class UserServiceImpl implements UserService {
-
     @Autowired
     private UserRepository userRepository;
 
-    @Override
+   @Override
     public User findById(Integer idUser) {
-        return userRepository.findById(idUser);
+        return null;
     }
 
     @Override
     public User findByEmail(String email) {
-        return userRepository.findByEmail(email);
+        return null;
     }
 
     @Override
     public User findByName(String name) {
-        return userRepository.findByName(name);
+        return null;
     }
 
     @Override
@@ -39,9 +38,8 @@ public class UserServiceImpl implements UserService {
 
     @Override
     public void deleteById(Integer idUser) {
-        userRepository.deleteById(idUser);
+        userRepository.delete(idUser);
     }
-
     @Override
     public Collection<User> findAll() {
         return userRepository.findAll();

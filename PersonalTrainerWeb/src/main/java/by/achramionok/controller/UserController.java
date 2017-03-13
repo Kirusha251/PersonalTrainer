@@ -9,7 +9,6 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.util.Collection;
-import java.util.List;
 
 /**
  * Created by Kirill on 04.03.2017.
@@ -17,6 +16,7 @@ import java.util.List;
 @RestController
 @RequestMapping(value = "/users")
 public class UserController {
+
     @Autowired
     private UserService userService;
 

@@ -1,14 +1,15 @@
 package by.achramionok.model;
 
 import javax.persistence.*;
+import java.io.Serializable;
 import java.util.Date;
 
 /**
  * Created by Kirill on 01.03.2017.
  */
 @Entity
-@Table(name = "user",catalog = "d6nc4cdvp2slen", schema = "public")
-public class User {
+@Table(name = "user")//,catalog = "d6nc4cdvp2slen", schema = "public")
+public class User  implements Serializable {
     private int id;
     private String name;
     private int role;
