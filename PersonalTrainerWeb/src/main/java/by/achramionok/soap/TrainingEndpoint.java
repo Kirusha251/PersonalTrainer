@@ -33,7 +33,7 @@ public class TrainingEndpoint {
 
     @PayloadRoot(namespace = NAMESPACE_URI, localPart = "getCountryRequest")
     @ResponsePayload
-    public GetTrainingResponse getCountry(@RequestPayload GetTrainingRequest request) {
+    public GetTrainingResponse getTrainingResponse(@RequestPayload GetTrainingRequest request) {
         GetTrainingResponse response = new GetTrainingResponse();
         List<Training> trainingsList = trainingRepository.findAll();
         for(Training tr: trainingsList){
