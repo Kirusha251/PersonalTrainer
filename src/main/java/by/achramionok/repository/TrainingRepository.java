@@ -2,7 +2,6 @@ package by.achramionok.repository;
 
 import by.achramionok.model.Training;
 import org.springframework.data.jpa.repository.JpaRepository;
-import org.springframework.stereotype.Repository;
 
 import java.util.Collection;
 

@@ -1,7 +1,6 @@
 package by.achramionok.service;
 
 import by.achramionok.model.User;
-import org.springframework.stereotype.Service;
 
 import java.util.Collection;
 
