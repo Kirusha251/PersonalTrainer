@@ -1,1 +1,1 @@
-java -jar target/personaltrainerapp*.jar
+web: java -Dserver.port=$PORT $JAVA_OPTS -jar target/personaltrainerapp*.jar
