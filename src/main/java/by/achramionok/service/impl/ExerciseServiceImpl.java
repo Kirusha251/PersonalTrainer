@@ -19,23 +19,28 @@ public class ExerciseServiceImpl implements ExerciseService {
 
     @Override
     public Exercise findById(Integer id) {
-        return exerciseRepository.findById(id);
+        return exerciseRepository.findOne(id);
     }
 
     @Override
     public Exercise findByName(String name) {
-        return exerciseRepository.findByName(name);
+        return null;
     }
 
-    @Override
-    public void save(Exercise exercise) {
-        exerciseRepository.save(exercise);
-    }
-
-    @Override
-    public void deleteById(Integer id) {
-        exerciseRepository.deleteById(id);
-    }
+//    @Override
+//    public Exercise findByName(String name) {
+//        return exerciseRepository.findByName(name);
+//    }
+//
+//    @Override
+//    public void save(Exercise exercise) {
+//        exerciseRepository.save(exercise);
+//    }
+//
+//    @Override
+//    public void deleteById(Integer id) {
+//        exerciseRepository.deleteById(id);
+//    }
 
     @Override
     public Collection<Exercise> findAll() {

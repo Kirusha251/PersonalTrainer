@@ -5,14 +5,15 @@ package by.achramionok.model;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 
 import javax.persistence.*;
+import java.io.Serializable;
 import java.util.Set;
 
 /**
  * Created by Kirill on 04.03.2017.
  */
 @Entity
-@Table(name = "exercise")//, catalog = "d6nc4cdvp2slen", schema = "public")
-public class Exercise {
+@Table(name = "exercise", catalog = "d6nc4cdvp2slen", schema = "public")
+public class Exercise implements Serializable {
     @Id
     @GeneratedValue
     @Column(name = "id",nullable = false)

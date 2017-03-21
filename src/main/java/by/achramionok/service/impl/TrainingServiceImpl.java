@@ -19,7 +19,7 @@ public class TrainingServiceImpl implements TrainingService {
 
     @Override
     public Training findById(Integer id) {
-        return trainingRepository.findById(id);
+        return trainingRepository.findOne(id);
     }
 
     @Override
@@ -34,7 +34,7 @@ public class TrainingServiceImpl implements TrainingService {
 
     @Override
     public void deleteById(Integer id) {
-        trainingRepository.deleteById(id);
+        trainingRepository.delete(id);
     }
 
     @Override

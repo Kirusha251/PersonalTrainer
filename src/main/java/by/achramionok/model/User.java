@@ -1,8 +1,6 @@
 package by.achramionok.model;
 
 import javax.persistence.*;
-import javax.xml.bind.annotation.XmlRootElement;
-import javax.xml.bind.annotation.XmlType;
 import java.io.Serializable;
 import java.util.Date;
 
@@ -10,40 +8,37 @@ import java.util.Date;
  * Created by Kirill on 01.03.2017.
  */
 @Entity
-@Table(name = "user")//,catalog = "d6nc4cdvp2slen", schema = "public")
+@Table(name = "users", catalog = "d6nc4cdvp2slen", schema = "public")
 public class User implements Serializable {
+
     @Id
     @GeneratedValue
     @Column(name = "id", nullable = false)
     private int id;
-    @Basic
+
     @Column(name = "name", length = 50)
     private String name;
-    @Basic
+
     @Column(name = "role")
     private int role;
-    @Basic
+
     @Column(name = "age")
     private int age;
-    @Basic
+
     @Column(name = "email", length = 50)
     private String email;
-    @Basic
+
     @Column(name = "password", length = 50)
     private String password;
-    @Basic
+
     @Column(name = "sex", length = 20)
     private String sex;
-    @Basic
+
     @Column(name = "birthday")
     private Date birthday;
-    @Basic
+
     @Column(name = "registered_at")
     private Date registeredAt;
-
-    public User() {
-
-    }
 
     public int getId() {
         return id;

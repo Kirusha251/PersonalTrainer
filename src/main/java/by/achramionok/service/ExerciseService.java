@@ -11,7 +11,5 @@ import java.util.Collection;
 public interface ExerciseService {
     Exercise findById(Integer id);
     Exercise findByName(String name);
-    void save(Exercise exercise);
-    void deleteById(Integer id);
     Collection<Exercise> findAll();
 }

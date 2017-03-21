@@ -8,7 +8,7 @@ import java.util.Set;
  * Created by Kirill on 04.03.2017.
  */
 @Entity
-@Table(name = "training")//, catalog = "d6nc4cdvp2slen", schema = "public")
+@Table(name = "training", catalog = "d6nc4cdvp2slen", schema = "public")
 public class Training implements Serializable {
     @Id
     @GeneratedValue
